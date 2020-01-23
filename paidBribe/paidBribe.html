@@ -37,16 +37,34 @@
 
             <div class="form-desc">
                 <p>
-                    
+                    We understand that in some situations, you are left with no choice but to go with the ethically questionable move.
+                    Here you can share your experience and we'll try to make sure that noone else has to go through a similar situation.
                 </p>
             </div>
+
             <div class="form-style-8">
                 <h2>Please enter the following details to the best of your knowledge!</h2>
                 <form>
-                  <input type="text" name="field1" placeholder="Full Name" />
-                  <input type="email" name="field2" placeholder="Email" />
-                  <input type="url" name="field3" placeholder="Website" />
-                  <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
+                    <select >
+                        <option value="" selected disabled hidden>Choose the service</option>
+                        <option value="1"> Healthcare </option>
+                        <option value="2"> Banking </option>
+                        <option value="3"> Railways </option>
+                        <option value="4"> Passport Seva </option>
+                        <option value="5"> Traffic Policing </option>
+                    </select>
+                  <input type="text" name = "field1" placeholder="City" />
+                  <input type="text" name="field2" placeholder="Why were you asked for a bribe?" />
+
+                  <div id="date">
+                      <p>
+                        When did it happen?
+                      </p>
+                    <input type="datetime-local" name="bdaytime">
+                  </div>
+                  
+                  <input type="text" name="field3" placeholder="Enter the title of your report" />
+                  <input type="text" name="field3" placeholder="Describe your experience" />
                   <input type="button" value="Send Message" />
                 </form>
               </div>
@@ -56,23 +74,23 @@
         <aside>
     
             <div class="card text-center">
-                <div class="card-header">Featured</div>
+                <div class="card-header"> Successfully battled bribery story! </div>
                 <div class="card-body">
                     <h5 class="card-title">NASA launches solar probe</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
                     <a href="#" class="btn btn-primary">Know more</a>
                 </div>
-                <div class="card-footer text-muted">2 days ago</div>
+                <div class="card-footer"> Read More </div>
             </div>
 
             <div class="card text-center">
-                <div class="card-header">Featured</div>
+                <div class="card-header"> Successfully battled bribery story! </div>
                 <div class="card-body">
                     <h5 class="card-title">NASA launches solar probe</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
                     <a href="#" class="btn btn-primary">Know more</a>
                 </div>
-                <div class="card-footer text-muted">2 days ago</div>
+                <div class="card-footer"> Read More </div>
             </div>
 
         </aside>
