@@ -16,7 +16,7 @@ mongoose.connect(`${process.env.db}`, {
 
 const expressSession = require('express-session')
 const connectMongo = require('connect-mongo')
-const connectFlash = require('connect-flash')
+ const connectFlash = require('connect-flash')
 
 // Controllers
 const homePageController = require('./controllers/homePage')
@@ -35,7 +35,7 @@ app.use(expressSession({
         mongooseConnection: mongoose.connection
     })
 }));
-app.use(connectFlash())
+ app.use(connectFlash())
 
 app.use(express.static('public'))
 app.use(expressEdge.engine)
