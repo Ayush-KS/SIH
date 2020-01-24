@@ -1,5 +1,6 @@
 // Importing modules
 require('dotenv').config();
+
 const path = require('path')
 
 const express = require('express')
@@ -8,10 +9,10 @@ const app = new express()
 const edge = require('edge.js')
 
 const mongoose = require('mongoose')
-mongoose.connect(process.env.DB_URI, {
+mongoose.connect(`${process.env.db}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
-})
+});
 
 const expressSession = require('express-session')
 const connectMongo = require('connect-mongo')
@@ -21,6 +22,7 @@ const connectFlash = require('connect-flash')
 const homePageController = require('./controllers/homePage')
 const faqPageController = require('./controllers/faqPage')
 const paidBribePageController = require('./controllers/paidBribePage')
+const refusedBribePageController = require('./controllers/refusedBribePage');
 
 // Middlewares
 const mongoStore = connectMongo(expressSession)
@@ -32,7 +34,7 @@ app.use(expressSession({
     store: new mongoStore({
         mongooseConnection: mongoose.connection
     })
-}))
+}));
 app.use(connectFlash())
 
 app.use(express.static('public'))
@@ -45,6 +47,7 @@ app.set('views',`${__dirname}/views`)
 app.get('/', homePageController)
 app.get('/paidbribe', paidBribePageController)
 app.get('/faq', faqPageController)
+app.get('/refusedbribe', refusedBribePageController)
 
 app.use((req, res) => {
     res.render('not-found')
@@ -53,4 +56,3 @@ app.use((req, res) => {
 app.listen(process.env.PORT, () => {
     console.log(`App listening on port ${process.env.PORT}`);
 })
-

@@ -1,0 +1,91 @@
+@layout('layouts.homeLayout')
+
+@section('title')
+Home
+@endsection
+
+@section('styles')
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/home.css">
+@endsection
+
+@section('content')
+    
+<section id="my-section">
+    
+    <div class="active" id="wrap-cta">
+      <div id="heading">
+        Curb Your Corruption!
+      </div>
+      <button id="cta">Explore our Services!</button>
+    </div>
+    <svg viewBox="0 0 215 110" preserveAspectRatio="none">
+      <polygon class="polymorph" points="215,110 0,110 0,0 215,0"></polygon>
+    </svg>
+    <div class="container">
+      <div id="content">
+      <a href="">
+        <div class="col-sm-6">
+          <div class="card text-white bg-info mb-4">
+              <div class="card-body">
+                  <h5 class="card-title">FAQ</h5>
+                  <p class="card-text">Find your queries resolved!</p>
+              </div>
+          </div>
+        </div>
+      </a>
+        
+      <a href="/paidBribe">
+        <div class="col-sm-6">
+          <div class="card text-white bg-info mb-4">
+              <div class="card-body">
+                  <h5 class="card-title">Did you have to pay a bribe?</h5>
+                  <p class="card-text">Report your incident in absolute anonymity here help prevent further incidents.</p>
+              </div>
+          </div>
+      </div>
+      </a>
+      
+      <a href="">
+        <div class="col-sm-6">
+          <div class="card text-white bg-info mb-4">
+              <div class="card-body">
+                  <h5 class="card-title">Are you being asked a bribe?</h5>
+                  <p class="card-text">Not being able to get your work done honestly? Address your issue here.</p>
+              </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="">
+        <div class="col-sm-6">
+          <div class="card text-white bg-info mb-4">
+              <div class="card-body">
+                  <h5 class="card-title">Write to your representatives!</h5>
+                  <p class="card-text">Directly contact your MLAs/MPs.</p>
+              </div>
+          </div>
+      </div> 
+      </a> 
+
+        <div id="info">
+          Fighting Corruption is the first step in making sure a country develops. And this fight starts with you!
+          Go ahead and explore our services and be a warrior against corruption!
+        </div>
+
+        <button id="close">Back to the stats!</button>
+      </div>
+    </div>
+
+    
+
+  </section>
+
+@endsection
+
+@section('scripts')
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js" 
+    integrity="sha256-kRbW+SRRXPogeps8ZQcw2PooWEDPIjVQmN1ocWVQHRY=" crossorigin="anonymous">
+  </script>
+  <script src="/js/home.js"></script>
+@endsection
