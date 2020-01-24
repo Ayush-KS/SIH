@@ -22,17 +22,23 @@ Home
         <img src="./images/Indiamap.jpg" alt="India" usemap="#Indiamap" id="India">
 
         <map name="Indiamap">
-            <area shape="poly" coords="129,44,144,62,139,72,139,88,160,100,175,90,195,100,208,95,200,80,215,56,190,57,156,35,129,44" alt="Jammu & Kashmir" onmouseover="getDetails(this)" onmouseout="removeDetails()">
-            <area shape="poly" coords="163,104,171,95,192,103,199,116,188,121,185,130,163,104" alt="Himachal Pradesh" onmouseover="getDetails(this)" onmouseout="removeDetails()">
+            <area shape="poly" coords="129,44,144,62,139,72,139,88,160,100,175,90,195,100,208,95,200,80,215,56,190,57,156,35,129,44" alt="J&K" onmouseover="getDetails(this)" onmouseout="removeDetails()">
+            <area shape="poly" coords="163,104,171,95,192,103,199,116,188,121,185,130,163,104" alt="H.P" onmouseover="getDetails(this)" onmouseout="removeDetails()">
             <area shape="poly" coords="155,106,173,125,157,139,142,133,155,106" alt="Punjab" onmouseover="getDetails(this)" onmouseout="removeDetails()">
 
             <area shape="poly" coords="223,133,213,152,190,135,197,120,223,133" alt="Uttarakhand" onmouseover="getDetails(this)" onmouseout="removeDetails()">
         </map>
 
-        <div class="card" id="state-info-card" style="width: 200px;">
+        <div id="bribe-details">
+          Know the corruption details state-wise:
+        </div>
+
+        <div class="card" id="state-info-card" style="width: 250px;">
           <div class="card-body text-center">
-              <h5 class="card-title" id="state-info"></h5>
-              <p class="card-text"></p>
+              <h5 class="card-title" id="state-info">State</h5>
+              <br>
+              <h6 class="card-text">Total instances of bribes: 4562</h6>
+              <h6 class="card-text">Total amount in INR: 2,00,00,000</h6>
               <a href="#" class="btn btn-primary">View Details</a>
           </div>
         </div>
@@ -112,7 +118,7 @@ Home
 @section('scripts')
 <script>
   function removeDetails() {
-      document.getElementById("state-info").innerHTML = "";
+      document.getElementById("state-info").innerHTML = "State";
   }
   
   function getDetails(ele) {

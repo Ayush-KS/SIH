@@ -27,7 +27,7 @@ body {
   opacity: 1;
 }
 
-#heading, #botting {
+#heading, #botting, #bribe-details {
   color: white;
   font-size: 4.3rem;
   position: absolute;
@@ -43,6 +43,15 @@ body {
   font-size: 2rem;
   right: 40px;
   bottom: 10px;
+}
+
+#bribe-details {
+  width: 250px;
+  font-size: 1.5rem;
+  right: -460px;
+  bottom: 350px;
+  margin: 0;
+  line-height: 30px;
 }
 
 #wrap-cta #cta {
@@ -181,5 +190,5 @@ img {
 #state-info-card {
   position: absolute;
   bottom: 100px;
-  left: 700px;
+  left: 685px;
 }
