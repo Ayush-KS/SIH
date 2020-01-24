@@ -27,13 +27,22 @@ body {
   opacity: 1;
 }
 
-#heading {
+#heading, #botting {
   color: white;
-  font-size: 4rem;
+  font-size: 4.3rem;
   position: absolute;
-  bottom: 450px;
+  right: 470px;
+  bottom: 500px;
   width: auto;
-  text-align: center;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 1px;
+}
+
+#botting {
+  font-size: 2rem;
+  right: 40px;
+  bottom: 10px;
 }
 
 #wrap-cta #cta {
@@ -97,7 +106,7 @@ svg .polymorph {
   transition: transform 0s 0s, opacity 0s 0s;
 }
 .container #content #close:hover {
-  background: #98C8D8;
+  background: rgb(190, 239, 255);
 }
 .container #content.active {
   z-index: 4;
@@ -119,8 +128,11 @@ svg .polymorph {
 .col-sm-6 {
   position: relative;
   left: -100px;
-  margin-top: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 20px;
+  padding: 0;
 }
+
 
 .card-title {
   font-size: 2rem;
@@ -132,6 +144,7 @@ svg .polymorph {
 
 
 #info {
+  background: #F2F2F2;
   width: 500px;
   height: auto;
   color: #03A9F4;
@@ -140,9 +153,10 @@ svg .polymorph {
   position: absolute;
   top: 10%;
   right: 0%;
-  padding: 15px;
+  padding: 20px;
 }
 
 a {
+  width: auto;
   text-decoration: none !important;
 }
