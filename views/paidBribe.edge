@@ -26,28 +26,25 @@ Paid Bribe
 
             <div class="form-style-8">
                 <h2>Please enter the following details to the best of your knowledge!</h2>
-                <form>
-                    <select >
+                <form action="/submit/paidbribe" method="POST">
+                    <select name="service" value="{{ data.service || '' }}">
                         <option value="" selected disabled hidden>Choose the service</option>
-                        <option value="1"> Healthcare </option>
-                        <option value="2"> Banking </option>
-                        <option value="3"> Railways </option>
-                        <option value="4"> Passport Seva </option>
-                        <option value="5"> Traffic Policing </option>
+                        <option value="Healthcare"> Healthcare </option>
+                        <option value="Banking"> Banking </option>
+                        <option value="Railways"> Railways </option>
+                        <option value="Passport"> Passport Seva </option>
+                        <option value="Traffic"> Traffic Policing </option>
                     </select>
-                  <input type="text" name = "field1" placeholder="City" />
-                  <input type="text" name="field2" placeholder="Why were you asked for a bribe?" />
+                  <input type="text" name = "city" placeholder="City" value="{{ data.city || '' }}"/>
+                  <input type="text" name="reason" placeholder="Why were you asked for a bribe?" value="{{ data.reason || '' }}" />
 
                   <div id="date">
-                      <p>
-                        When did it happen?
-                      </p>
-                    <input type="datetime-local" name="bdaytime">
+                    <input name="datetime" onfocus="(this.type='datetime-local')" onblur="(this.type='text')" type="text" placeholder="When did it happen?" value="{{ data.datetime || '' }}">
                   </div>
                   
-                  <input type="text" name="field3" placeholder="Enter the title of your report" />
-                  <input type="text" name="field3" placeholder="Describe your experience" />
-                  <input type="button" value="Send Message" />
+                  <input type="text" name="title" placeholder="Enter the title of your report" value="{{ data.title || '' }}" />
+                  <input type="text" name="description" placeholder="Describe your experience" value="{{ data.description || '' }}" />
+                  <input type="submit" value="Send Message" />
                 </form>
               </div>
 
