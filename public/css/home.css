@@ -160,3 +160,26 @@ a {
   width: auto;
   text-decoration: none !important;
 }
+
+img {
+  cursor: pointer;
+}
+
+#indiaMap {
+  position: absolute;
+  bottom: 100px;
+  left: -80px;
+  z-index: 5;
+}
+
+/* #state-info {
+  position: absolute;
+  font-size: 1.5rem;
+  color: white;
+} */
+
+#state-info-card {
+  position: absolute;
+  bottom: 100px;
+  left: 700px;
+}
