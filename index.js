@@ -25,6 +25,7 @@ const paidBribePageController = require('./controllers/paidBribePage')
 const refusedBribePageController = require('./controllers/refusedBribePage');
 
 const storePaidBribeController = require('./controllers/storePaidBribe')
+const storeRefusedBribeController = require('./controllers/storeRefusedBribe');
 
 // Middlewares
 const mongoStore = connectMongo(expressSession)
@@ -51,6 +52,7 @@ app.get('/paidbribe', paidBribePageController)
 app.get('/faq', faqPageController)
 app.get('/refusedbribe', refusedBribePageController)
 app.post('/submit/paidbribe', storePaidBribeController)
+app.post('/submit/refusedbribe', storeRefusedBribeController)
 
 app.use((req, res) => {
     res.render('not-found')

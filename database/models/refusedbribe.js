@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const PaidBribeSchema = new mongoose.Schema({
+const RefusedBribeSchema = new mongoose.Schema({
     title: {
         type: String
     },
@@ -29,7 +29,7 @@ const PaidBribeSchema = new mongoose.Schema({
     }
 });
 
-const PaidBribe = mongoose.model('PaidBribe',PaidBribeSchema)
+const RefusedBribe = mongoose.model('RefusedBribe', RefusedBribeSchema)
 
-module.exports = PaidBribe
+module.exports = RefusedBribe
 

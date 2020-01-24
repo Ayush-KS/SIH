@@ -38,8 +38,6 @@ btnCta.addEventListener('click', () => {
     ...common,
     points: [
     { value: '215,110 0,110 186,86 215,0' }] });
-
-
 });
 
 

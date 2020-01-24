@@ -1,4 +1,4 @@
-const paidbribe = require('../database/models/paidbribe');
+const paidbribe = require('../database/models/refusedbribe');
 
 module.exports = (req,res) => {
     paidbribe.create(req.body, (error, data) => {
@@ -8,7 +8,7 @@ module.exports = (req,res) => {
 
             req.flash('data', req.body)
 
-            return res.redirect('/paidbribe')
+            return res.redirect('/refusedbribe')
         }
         res.redirect('/')
     })
