@@ -1,0 +1,16 @@
+.card {
+    margin-bottom: 10px !important;
+}
+
+#heading {
+    font-size: 1.9rem;
+    margin: 0px 0px 25px 20px;
+}
+
+.mb-0 .btn {
+    font-size: 1.4rem;
+}
+
+#accordion {
+    margin-bottom: 20px;
+}
