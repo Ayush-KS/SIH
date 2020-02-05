@@ -1,12 +1,4 @@
-// anime({
-//     targets: 'div',
-//     translateX: 250,
-//     rotate: '1turn',
-//     backgroundColor: '#FFF',
-//     duration: 800
-//   });
 
-// console.log("heh script loaded!");
 // Refs
 const wrapCta = document.querySelector('#wrap-cta'),
 btnCta = document.querySelector('#cta'),
@@ -32,6 +24,7 @@ btnCta.addEventListener('click', () => {
 //  $('#heading').css('display', 'none');
 //   $('.col-sm-6').css('display', 'block');
 //   $('#close').css('display', 'block');
+  $('#state-info-card,#bribe-details').css('display', 'none');
 
   // Morph SVG
   anime({
@@ -49,12 +42,11 @@ btnClose.addEventListener('click', () => {
 //  $('#heading').css('display', 'block');
 //   $('.col-sm-6').css('display', 'none');
 //   $('#close').css('display', 'none');
+$('#state-info-card,#bribe-details').css('display', 'block');
 
   // Morph SVG
   anime({
     ...common,
     points: [
     { value: '215,110 0,110 0,0 215,0' }] });
-
-
 });

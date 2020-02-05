@@ -4,13 +4,45 @@
 
 #heading {
     font-size: 1.9rem;
-    margin: 0px 0px 25px 20px;
+    margin: 0px 0px 25px 40px;
 }
 
 .mb-0 .btn {
     font-size: 1.4rem;
 }
 
+#main-area {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
 #accordion {
     margin-bottom: 20px;
+    display: inline-block;
 }
+
+form {
+    display: inline-block;
+    padding: 30px !important;
+    box-shadow: 0px 0px 4px 0px rgb(50, 39, 80);
+    height: 590px;
+}
+
+#form-heading {
+    margin-bottom: 20px;
+}
+
+.form-prompt {
+    font-size: 1.1rem;
+    font-weight: 490;
+}
+
+.form-prompt:nth-child(3) {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+

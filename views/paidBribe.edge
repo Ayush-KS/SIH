@@ -26,7 +26,7 @@ Paid Bribe
 
             <div class="form-style-8">
                 <h2>Please enter the following details to the best of your knowledge!</h2>
-                <form action="/submit/paidbribe" method="POST">
+                <form action="/submit/refusedbribe" method="POST">
                     <select name="service" value="{{ data.service || '' }}">
                         <option value="" selected disabled hidden>Choose the service</option>
                         <option value="Healthcare"> Healthcare </option>
@@ -35,17 +35,10 @@ Paid Bribe
                         <option value="Passport"> Passport Seva </option>
                         <option value="Traffic"> Traffic Policing </option>
                     </select>
-                  <input type="text" name = "city" placeholder="City" value="{{ data.city || '' }}"/>
-                  <input type="text" name = "state" placeholder="State" value="{{ data.state || '' }}"/>
-
+                    
+                    
                   <input type="text" name="reason" placeholder="Why were you asked for a bribe?" value="{{ data.reason || '' }}" />
 
-                  <div id="date">
-                    <p>
-                      When did it happen?
-                    </p>
-                    <input type="datetime" name="datetime" value="{{ data.datetime || '' }}">
-                  </div>
                   
                   <input type="text" name="title" placeholder="Enter the title of your report" value="{{ data.title || '' }}" />
                   <input type="text" name="description" placeholder="Describe your experience" value="{{ data.description || '' }}" />
@@ -55,7 +48,7 @@ Paid Bribe
                   
                   <input type="submit" value="Send Message" />
                 </form>
-              </div>
+            </div>
 
         </main>
     

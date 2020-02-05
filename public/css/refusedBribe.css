@@ -19,7 +19,7 @@
 
 main, aside {
     margin: 0 20px;
-    height: 80vh;
+    height: auto;
 }
 
 main {
