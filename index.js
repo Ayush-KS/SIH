@@ -9,8 +9,10 @@ const app = new express()
 const edge = require('edge.js')
 
 const mongoose = require('mongoose')
-
-mongoose.connect(`mongodb://localhost/sih_development`);
+mongoose.connect(process.env.DB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 const expressSession = require('express-session')
 const connectMongo = require('connect-mongo')
