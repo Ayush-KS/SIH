@@ -14,16 +14,19 @@ const common = {
   duration: 600,
   loop: false };
 
-
+  $('.container').css('display', 'none');
 
 // Show content
 btnCta.addEventListener('click', () => {
   // Elements apparence
   wrapCta.classList.remove('active');
   content.classList.add('active');
-//  $('#heading').css('display', 'none');
-//   $('.col-sm-6').css('display', 'block');
-//   $('#close').css('display', 'block');
+
+  setTimeout(function() {
+      $('.container').css('display', 'block');
+      $('.container').css('transition', 'all 1s ease-in-out');
+    }, 330);
+  
   $('#state-info-card,#bribe-details').css('display', 'none');
 
   // Morph SVG
@@ -39,9 +42,9 @@ btnClose.addEventListener('click', () => {
   // Elements apparence
   content.classList.remove('active');
   wrapCta.classList.add('active');
-//  $('#heading').css('display', 'block');
-//   $('.col-sm-6').css('display', 'none');
-//   $('#close').css('display', 'none');
+  
+  
+  
 $('#state-info-card,#bribe-details').css('display', 'block');
 
   // Morph SVG
@@ -49,4 +52,6 @@ $('#state-info-card,#bribe-details').css('display', 'block');
     ...common,
     points: [
     { value: '215,110 0,110 0,0 215,0' }] });
+
+    $('.container').css('display', 'none');
 });

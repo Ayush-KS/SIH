@@ -23,6 +23,7 @@ const homePageController = require('./controllers/homePage')
 const faqPageController = require('./controllers/faqPage')
 const paidBribePageController = require('./controllers/paidBribePage')
 const refusedBribePageController = require('./controllers/refusedBribePage');
+const ewsPageController = require('./controllers/ews');
 
 const storePaidBribeController = require('./controllers/storePaidBribe')
 const storeRefusedBribeController = require('./controllers/storeRefusedBribe');
@@ -53,6 +54,7 @@ app.get('/faq', faqPageController)
 app.get('/refusedbribe', refusedBribePageController)
 app.post('/submit/paidbribe', storePaidBribeController)
 app.post('/submit/refusedbribe', storeRefusedBribeController)
+app.get('/ews', ewsPageController);
 
 app.use((req, res) => {
     res.render('not-found')
